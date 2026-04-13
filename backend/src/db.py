@@ -2,6 +2,9 @@ import os
 from time import sleep
 import psycopg
 from psycopg import Connection, Cursor
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class Database:
 
