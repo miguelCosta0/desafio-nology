@@ -1,0 +1,59 @@
+.cashback-page {
+    & {
+        width: 100%;
+    }
+
+    .form {
+        width: 50%;
+        margin: 20px auto;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        justify-content: flex-start;
+        align-items: center;
+
+        &>.MuiBox-root {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            column-gap: 20px;
+            justify-content: flex-start;
+            align-items: center;
+
+            .MuiFormControl-root .MuiFormGroup-root {
+                flex-direction: row;
+
+            }
+
+            .MuiTextField-root {
+                flex-grow: 1;
+                flex-shrink: 3;
+                min-width: 120px;
+            }
+
+            .MuiFormHelperText-root {
+                margin: 0 5px;
+                color: red;
+            }
+
+            .MuiSelect-root {
+                width: 170px;
+
+                .MuiSelect-select {
+                    padding: 10px;
+                    padding-right: 30px;
+                }
+            }
+        }
+    }
+
+    .response {
+        width: 40%;
+        margin: 20px auto;
+
+        &>* {
+            margin: 0 auto;
+        }
+    }
+}
