@@ -10,7 +10,8 @@ def calc_cashback(price: float, vip_customer: bool) -> float:
     return round(cashback, 2)
 
 def cashback_percentage(vip_customer: bool) -> float:
-    perc = .05
+    base = .05
+    perc = base
     if vip_customer:
-        perc += .10
+        perc += base * .10
     return perc
