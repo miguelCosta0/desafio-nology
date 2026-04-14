@@ -17,10 +17,7 @@ class Database:
 
     def connect(self, autocommit: bool = True):
         n = 10
-        for attempt in range(n + 1):
-            if attempt == n:
-                raise ConnectionError(fr'Could not connect to the database')
-
+        for attempt in range(n):
             try:
                 self.conn = psycopg.connect(
                     user=os.environ["DB_USER"],
@@ -30,7 +27,11 @@ class Database:
                     dbname=os.environ["API_DB"],
                     autocommit=autocommit
                 )
-            except Exception:
+            except Exception as e:
+                if attempt == n - 1:
+                    print(e)
+                    raise ConnectionError(fr'Could not connect to the database')
+
                 sleep(1)
             
             if self.conn is not None:
