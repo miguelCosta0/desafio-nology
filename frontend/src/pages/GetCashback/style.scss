@@ -3,6 +3,11 @@
         width: 100%;
     }
 
+    &>.MuiTypography-root {
+        width: fit-content;
+        margin: 0 auto 20px;
+    }
+
     .form {
         width: 50%;
         margin: 20px auto;
@@ -23,7 +28,6 @@
 
             .MuiFormControl-root .MuiFormGroup-root {
                 flex-direction: row;
-
             }
 
             .MuiTextField-root {

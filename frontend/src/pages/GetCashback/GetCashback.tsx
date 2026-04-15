@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { TClientType } from '@types';
 
+import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
@@ -26,6 +27,7 @@ export default function InsertPage() {
 
     return (
         <Box className="cashback-page">
+            <Typography variant='h3'> Calcular Cashback </Typography>
             <Paper className='form'>
                 <Box>
                     <FormControl>

@@ -18,8 +18,8 @@ export default function Historico() {
 
     return (
         <Box className="calculations-page">
+            <Typography variant='h3'> Histórico </Typography>
             <Paper className='table1'>
-                <Typography variant='h3'> Histórico </Typography>
                 <CalculationsTable data={data} />
             </Paper>
         </Box>
